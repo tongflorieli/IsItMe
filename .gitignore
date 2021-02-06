@@ -37,6 +37,9 @@
 # *.iml
 # *.ipr
 
+# Flask
+venv/*
+
 # CMake
 cmake-build-*/
 
