@@ -6,9 +6,10 @@ $(document).ready(function () {
 
 function UploadImg(){
     var formData = new FormData();
-	formData.append("imgfile", document.getElementById("upImage").files[0]);
+	formData.append("study_img", document.getElementById("studyUpImg").files[0]);
+	formData.append("unkown_img", document.getElementById("unkownUpImg").files[0]);
 	$.ajax({
-        url: '/UploadImage',
+        url: '/IsItMe',
         data: formData,
         enctype: 'multipart/form-data',
         type: "post",
@@ -16,7 +17,11 @@ function UploadImg(){
         contentType: false,
         cache: false,
         success: function(data) {
-
+            if(data.Name == "success"){
+                alert(data.Value + "      distance:"+data.Distance)
+            }else{
+                alert(data.Value)
+            }
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert("Error(s) encountered while uploading image." + thrownError.toString());
