@@ -1,0 +1,50 @@
+.container{
+    width:45%;
+    float:left;
+    padding: 20px;
+}
+
+.userimg{
+    max-width: 90%;
+    margin: auto;
+    display: block;
+    box-shadow: 0px 0px 15px yellow;
+}
+
+button{
+    background-color: #4285F4;
+	color:white;
+	padding:7px;
+	font-size:18px;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input{
+    display:none;
+}
+
+body{
+    text-align:center;
+}
+
+.icon{
+    height:20px;
+    margin: 0 5px;
+}
+
+#result{
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color: #DB4437;
+    display:none;
+    font-size:28px;
+}
+
+#parentdiv{
+    width: 100%;
+    overflow: auto;
+}

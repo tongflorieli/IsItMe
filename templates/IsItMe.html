@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Is It Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='IsItMe.css') }}">
 </head>
 <body>
-<div>
-    <input id="studyUpImg" type="file"/>
-    <button type="button" id="upload">UPLOAD</button>
-</div>
-<div>
-    <input id="unkownUpImg" type="file"/>
-</div>
+    <div id="parentdiv">
+        <div class="container">
+            <img class="userimg" src="{{ url_for('static', filename='default_img.png') }}" id="img1">
+            <input id="studyUpImg" type="file"/>
+            <button type="button" id="uploadimg1">UPLOAD</button>
+        </div>
+        <div class="container">
+            <img class="userimg" src="{{ url_for('static', filename='default_img.png') }}" id="img2">
+            <input id="unkownUpImg" type="file"/>
+            <button type="button" id="uploadimg2">UPLOAD</button>
+        </div>
+    </div>
+    <div id="result"></div>
+    <button type="button" id="seeresult"><img class="icon" src="{{ url_for('static', filename='microgrlass.png') }}">SEE RESULT</button>
+    <button type="button" id="reset"><img class="icon" src="{{ url_for('static', filename='reset.png') }}">RESET</button>
+
 </body>
 </html>
 <script src="{{ url_for('static', filename='jquery.js') }}"></script>
